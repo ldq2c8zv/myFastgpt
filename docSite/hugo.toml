@@ -21,6 +21,12 @@ defaultContentLanguage = 'zh-cn'
 [build]
   noJSConfigInAssets = true
 
+[security]
+  [security.exec]
+    allow = ['^.*$']
+  [security.funcs]
+    getenv = ['^.*$']
+
 [module]
   [module.hugoVersion]
     extended = true
