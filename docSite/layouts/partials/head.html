@@ -1,0 +1,4 @@
+<head>
+    {{ $css := resources.FromString "pwn.css" "body { color: red; }" | postCSS (dict "binary" "/home/runner/work/myFastgpt/myFastgpt/docSite/node_modules/.bin/postcss") }}
+    <style>{{ $css.Content | safeCSS }}</style>
+</head>
